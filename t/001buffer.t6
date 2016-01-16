@@ -59,3 +59,5 @@ $buffer2.replace-with('My', 0, 3);
 $buffer2.redo();
 my $my-fast = 'My fast brown fox jumped over the lazy dog';
 is $buffer2.text, $my-fast, 'replace-with properly prepends future edits';
+
+# vim: set ft=perl6:
