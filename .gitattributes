@@ -1,0 +1,2 @@
+*.t6 linguist-language=Perl6
+*.info linguist-language=JSON
