@@ -12,22 +12,22 @@ my $text = "The quick brown fox jumped over the lazy dog";
 my $buffer = Command::Buffer.new(:$text);
 is $buffer.text, $text, 'Retrieving text from a Command::Buffer';
 
-my $fast = "The fast brown fox jumped over the lazy dog";
+my $fast-text = "The fast brown fox jumped over the lazy dog";
 $buffer.replace-with("fast", 4, 9);
-is $buffer.text, $fast, "replace-with correctly modifies text";
+is $buffer.text, $fast-text, "replace-with correctly modifies text";
 
 my $canine = "The fast brown fox jumped over the lazy canine";
 $buffer.replace-with('canine', 40, 43);
 is $buffer.text, $canine, "replace-with calls correctly stack";
 
 $buffer.undo;
-is $buffer.text, $fast, "undo properly reverts to previous state";
+is $buffer.text, $fast-text, "undo properly reverts to previous state";
 
 $buffer.undo;
 is $buffer.text, $text, "undo properly works through successive calls";
 
 $buffer.redo;
-is $buffer.text, $fast, "redo properly re-reverts state of buffer";
+is $buffer.text, $fast-text, "redo properly re-reverts state of buffer";
 
 $buffer.redo;
 is $buffer.text, $canine, "subsequent calls to redo honor the stack";
