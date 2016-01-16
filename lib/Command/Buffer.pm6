@@ -1,5 +1,4 @@
 class Command::Buffer {
-
   use Command::Edit;
 
   has Str $.text is rw;
