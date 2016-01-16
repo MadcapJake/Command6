@@ -1,1 +1,2 @@
 *.info linguist-language=JSON
+*.t6 linguist-langauge=Perl6
