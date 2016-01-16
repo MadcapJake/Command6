@@ -1,4 +1,5 @@
 class Command::Edit {
+
   has $!buffer;
   has Str $.replacement;
   has Int $.from;
