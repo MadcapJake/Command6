@@ -1,7 +1,3 @@
-use v6;
-
-use lib 'lib';
-
 class Command::Buffer {
 
   use Command::Edit;
