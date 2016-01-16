@@ -1,0 +1,12 @@
+{
+  "perl"        : "6",
+  "name"        : "Command",
+  "version"     : "0.0.1",
+  "description" : "Command pattern in Perl 6",
+  "depends"     : [],
+  "source-url"  : "git://github.com/madcapjake/command6",
+  "provides"    : {
+    "Command::Buffer" : "lib/Command/Buffer.pm6",
+    "Command::Edit"   : "lib/Command/Edit.pm6"
+  }
+}
